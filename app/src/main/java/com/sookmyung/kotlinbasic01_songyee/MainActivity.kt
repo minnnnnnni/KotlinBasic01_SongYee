@@ -3,6 +3,7 @@ package com.sookmyung.kotlinbasic01_songyee
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -19,9 +20,12 @@ class MainActivity : AppCompatActivity() {
             // 얘는 로그캣에서 빨간 글씨로 뜬다.
             //로그의 종류는 여러 가지가 있는데 웬만하면 d,e,i(info) 선에서 해결하는 게 좋다
 
+        }
 
+        smallBtn.setOnClickListener {
 
-
+            Toast.makeText(this, "작은 버튼 눌림", Toast.LENGTH_SHORT).show()
+            // this는 여기 main activity에서 띄우겠다는 뜻.
         }
 
 
